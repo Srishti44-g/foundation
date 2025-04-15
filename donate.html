@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link rel="icon" type="image/x-icon" href="logo.png">
+    <title>Donate - Shreesurya Pushpa Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel ="stylesheet" href ="mobile-nav.css">
+    <script src="mobile-nav.js" defer></script>
+    <style>
+        .donation-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .donation-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .donation-card:hover,
+        .donation-form:hover {
+            transform: none;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+        }
+
+        .submit-btn {
+            background: #FFA500;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Center align navigation */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="mobile-nav-menu">
+            <ul>
+                <li style="--i:1"><a href="index.html">Home</a></li>
+                <li style="--i:2"><a href="index.html#about">About</a></li>
+                <li style="--i:3"><a href="gallery.html">Gallery</a></li>
+                <li style="--i:4"><a href="index.html#approval-letters">Approval</a></li>
+                <li style="--i:5"><a href="index.html#programs">Programs</a></li>
+                <li style="--i:6"><a href="index.html#impact">Impact</a></li>
+                <li style="--i:7"><a href="contact.html">Contact</a></li>
+                <li style="--i:8"><a href="https://shreesuryapushpanews.co.in/">News</a></li>
+                <li style="--i:9"><a href="books.html">Books</a></li>
+                <li style="--i:10"><a href="book_distribution.html">Literacy</a></li>
+                <li style="--i:11"><a href="volunteer.html">Volunteer</a></li>
+                <li style="--i:12"><a href="donate.html" class="donate-btn active">Donate</a></li>
+            </ul>
+        </nav>
+        <div class="nav-backdrop"></div>
+    </div>
+
+    <!-- Header -->
+  <header>
+    <div class="top-header">
+        <div class="container">
+            <div class="header-container">
+                <div class="logo-section">
+                    <img src="logo.png" alt="Shreesurya Pushpa Foundation Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Shreesurya Pushpa Foundation</h1>
+                        <span>Empowering Communities, Transforming Lives</span>
+                    </div>
+                </div>
+                
+                <div class="contact-lang-card">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+919406130259">+91 94061 30259</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@ShreesuryaPushpaFoundation.in">info@ShreesuryaPushpaFoundation.in</a>
+                    </div>
+                    <div class="language-switcher">
+                        <button onclick="changeLanguage('en')" class="lang-btn active" data-lang="en">English</button>
+                        <button onclick="changeLanguage('hi')" class="lang-btn" data-lang="hi">हिंदी</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="navbar">
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html#home" class="active">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#approval-letters">Approval</a></li>
+          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="index.html#impact">Impact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://shreesuryaPushpanews.co.in/">News</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="book_distribution.html">Literacy</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="donate.html" class="donate-btn">Donate</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="nav-overlay"></div>
+    <a href="tel:+919406130259" class="emergency-contact">
+        <i class="fas fa-phone-alt fa-shake"></i>
+        <span>Emergency Helpline</span>
+    </a>
+  
+    <section class="donate-section">
+        <div class="container">
+            <h2 class="section-title">Make a Contribution</h2>
+            <p class="section-desc">Your support helps us create positive change in our community</p>
+
+            <div class="donation-container">
+                <div class="form-section">
+                    <div class="form-panel">
+                        <h3><i class="far fa-calendar-alt"></i> Schedule a Visit</h3>
+                        <form id="visitForm" action="https://script.google.com/macros/s/AKfycbxaYKk5X84IEywNKyPTGv7RlgelfApAPdDFKpGwmaB7hblHcHEPQWPV8jHZg13XXcla/exec" method="POST">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                                    <input type="text" id="name" name="name" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+                                    <input type="email" id="email" name="email" required class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="preferred_date"><i class="fas fa-calendar"></i> Preferred Visit Date</label>
+                                    <input type="date" id="preferred_date" name="preferred_date" required class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferred_time"><i class="far fa-clock"></i> Preferred Time</label>
+                                <select id="preferred_time" name="preferred_time" required class="form-control">
+                                    <option value="">Select Time</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="11:00 AM">11:00 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="2:00 PM">2:00 PM</option>
+                                    <option value="3:00 PM">3:00 PM</option>
+                                    <option value="4:00 PM">4:00 PM</option>
+                                    <option value="5:00 PM">5:00 PM</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-calendar-check"></i> Schedule Visit
+                            </button>
+                        </form>
+                    </div>
+                    <div class="info-panel">
+                        <h3>Direct Contribution Information</h3>
+                        <div class="info-box">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Visit Us:</strong>
+                                    <p>Sarju Bagicha Masanganj<br>Bilaspur, Chhattisgarh 495001</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <i class="far fa-clock"></i>
+                                <div>
+                                    <strong>Office Hours:</strong>
+                                    <p>Monday to Saturday: 10:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <i class="fas fa-user"></i>
+                                <div>
+                                    <strong>Contact Person:</strong>
+                                    <p>Phone: +91 94061 30259<br>Email: info@shreesurya.org</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contribution-guidelines">
+                            <h4><i class="fas fa-clipboard-list"></i> Guidelines for Cash Contributions:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Please bring a valid ID proof for documentation purposes</li>
+                                <li><i class="fas fa-check"></i> Contributions above ₹2000 should preferably be made by check</li>
+                                <li><i class="fas fa-check"></i> A receipt will be provided for your contribution</li>
+                                <li><i class="fas fa-check"></i> All donations are eligible for tax benefits under 80G</li>
+                            </ul>
+                        </div>
+
+                        <div class="tax-benefit-info">
+                            <h4><i class="fas fa-hand-holding-usd"></i> Tax Benefits</h4>
+                            <p>All donations to Shreesurya Pushpa Foundation are eligible for tax deduction under Section 80G of the Income Tax Act.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-methods-section">
+                    <!-- QR Code Section -->
+                    <div class="qr-scan-container">
+                        <div class="qr-info">
+                            <h3>Quick Donation via UPI</h3>
+                            <p>Scan the QR code with any UPI payment app to make a secure donation</p>
+                            <div class="qr-image">
+                                <a href="Images/QR.jpeg" data-lightbox="donate-qr" data-title="UPI Donation QR Code">
+                                    <img src="Images/QR.jpeg" alt="Donation QR Code" class="qr-code">
+                                </a>
+                            </div>
+                            <div class="supported-apps">
+                                <span>Supported Apps:</span>
+                                <div class="app-icons">
+                                    <i class="fab fa-google-pay"></i>
+                                    <i class="fab fa-amazon-pay"></i>
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Receipt Preview Section -->
+                    <div class="receipt-container">
+                        <h4>Donation Receipt Sample</h4>
+                        <div class="receipt-image-container">
+                            <a href="Images/receipt.jpeg" data-lightbox="donate-receipt" data-title="Sample Donation Receipt">
+                                <img src="Images/receipt.jpeg" alt="Donation Receipt Sample" class="receipt-image">
+                            </a>
+                        </div>
+                        <div class="receipt-info">
+                            <i class="fas fa-info-circle"></i>
+                            <p>You will receive an official receipt for your contribution</p>
+                        </div>
+                        <ul class="receipt-features">
+                            <li><i class="fas fa-check-circle"></i> Section 80G tax deduction certificate</li>
+                            <li><i class="fas fa-check-circle"></i> Official NGO letterhead</li>
+                            <li><i class="fas fa-check-circle"></i> Digital signature included</li>
+                            <li><i class="fas fa-check-circle"></i> Instant email delivery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Shreesurya Pushpa Foundation</h3>
+            <p>Empowering Lives, Enriching Communities through sustainable development initiatives. Together, we can make a difference in the lives of those who need it most.</p>
+            <div class="social-icons">
+              <a href="https://facebook.com/your-page" title="Facebook" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/your-handle" title="Twitter" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://instagram.com/your-profile" title="Instagram" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://linkedin.com/company/your-company" title="LinkedIn" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://youtube.com/your-channel" title="YouTube" class="social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#programs">Our Programs</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#impact">Impact</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Our Programs</h3>
+            <ul class="footer-links">
+              <li><a href="#programs">Agriculture & Farming</a></li>
+              <li><a href="#programs">Education & Literacy</a></li>
+              <li><a href="#programs">Healthcare Initiatives</a></li>
+              <li><a href="#programs">Environmental Projects</a></li>
+              <li><a href="#programs">Women Empowerment</a></li>
+              <li><a href="#programs">Skill Development</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="footer-links">
+              <li>📍 Sarju Bagicha Masanganj, Bilaspur, Chhattisgarh 495001</li>
+              <li>📞 +91 94061 30259</li>
+              <li>✉️ info@shreesurya.org</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="copyright">
+          <p>&copy; 2025 Shreesurya Pushpa Foundation. All Rights Reserved. | Designed with 💖 for social impact</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Add Google Translate API -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi',
+                layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+                autoDisplay: false,
+                multilanguagePage: true
+            }, 'google_translate_element');
+        }
+    </script>
+</body>
+</html>
